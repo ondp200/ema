@@ -29,9 +29,6 @@ failed_attempts.json
 reports/
 test_report.html
 
-# Claude Code guidance file
-CLAUDE.md
-
 # Project documentation
 /README.md
 
@@ -39,4 +36,4 @@ CLAUDE.md
 *.pdf
 *.docx
 *.doc
-GEMINI.md
+
