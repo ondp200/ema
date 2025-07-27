@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environments
+.env
+.venv
+
+# IDEs
+.vscode/
+.idea/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit
+.streamlit/
+
+# Application-specific
+audit.log
+failed_attempts.json
+*.key
+.env.key
+
+# Test reports
+reports/
+test_report.html
+
+# Claude Code guidance file
+CLAUDE.md
+
+# Project documentation
+README.md
+
+# Document files
+*.pdf
+*.docx
+*.doc

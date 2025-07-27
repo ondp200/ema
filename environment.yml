@@ -1,0 +1,23 @@
+name: ema
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.9
+  - streamlit>=1.47.0
+  - plotly>=6.2.0
+  - pandas>=2.2.0
+  - cryptography>=45.0.0
+  - pytest>=7.0.0
+  - pytest-html>=3.1.0
+  - pytest-xdist>=3.0.0
+  - pytest-benchmark>=4.0.0
+  - pip
+  - pip:
+    - bcrypt>=4.3.0
+    - python-dotenv>=1.1.0
+    - great-expectations>=0.18.0
+    - pytest-cov>=4.0.0
+    - pytest-mock>=3.10.0
+    - freezegun>=1.2.0
+    - faker>=15.0.0
