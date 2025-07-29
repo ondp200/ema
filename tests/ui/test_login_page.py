@@ -237,7 +237,7 @@ class TestPasswordResetFunctionality:
         mock_button.return_value = False
         
         # Mock password validation
-        with patch('service_layer.pages.login_page.PasswordService') as mock_password_service:
+        with patch('service_layer.services.PasswordService') as mock_password_service:
             mock_password_service.is_valid_password.return_value = False
             
             # Act

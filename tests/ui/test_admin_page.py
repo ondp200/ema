@@ -294,7 +294,7 @@ class TestPasswordResetSection:
              patch('streamlit.text_input', return_value="weak"), \
              patch('streamlit.button', return_value=False), \
              patch('streamlit.warning') as mock_warning, \
-             patch('service_layer.pages.admin_page.PasswordService') as mock_password_service:
+             patch('service_layer.services.PasswordService') as mock_password_service:
             
             mock_password_service.is_valid_password.return_value = False
             admin_page._render_password_reset_section(current_user)
@@ -327,7 +327,7 @@ class TestPasswordResetSection:
              patch('streamlit.text_input', return_value="StrongPass123!"), \
              patch('streamlit.button', return_value=True), \
              patch('streamlit.success') as mock_success, \
-             patch('service_layer.pages.admin_page.PasswordService') as mock_password_service:
+             patch('service_layer.services.PasswordService') as mock_password_service:
             
             mock_password_service.is_valid_password.return_value = True
             admin_page._render_password_reset_section(current_user)
@@ -470,7 +470,7 @@ class TestUserCreationSection:
              patch('streamlit.selectbox', return_value="viewer"), \
              patch('streamlit.button', return_value=True), \
              patch('streamlit.success') as mock_success, \
-             patch('service_layer.pages.admin_page.PasswordService') as mock_password_service:
+             patch('service_layer.services.PasswordService') as mock_password_service:
             
             mock_password_service.is_valid_password.return_value = True
             admin_page._render_create_user_section()
@@ -499,7 +499,7 @@ class TestUserCreationSection:
              patch('streamlit.selectbox', return_value="viewer"), \
              patch('streamlit.button', return_value=True), \
              patch('streamlit.error') as mock_error, \
-             patch('service_layer.pages.admin_page.PasswordService') as mock_password_service:
+             patch('service_layer.services.PasswordService') as mock_password_service:
             
             mock_password_service.is_valid_password.return_value = True
             admin_page._render_create_user_section()

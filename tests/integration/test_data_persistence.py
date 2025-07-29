@@ -233,6 +233,7 @@ class TestDataPersistence:
         
         # Assert - Failed attempts are tracked across instances
         attempt_data = attempts_repo2.get_attempts("service_user")
+        assert attempt_data is not None, "Failed attempt data should be persisted"
         assert attempt_data["count"] == 1
         
         # Assert - Audit log contains all operations
